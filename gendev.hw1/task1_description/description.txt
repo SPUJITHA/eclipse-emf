@@ -1,0 +1,13 @@
+The main Stake-holders of Online Food Ordering System consists of Online User and Restaurant Employee.
+The business entities of this model are OnlineUser, FoodItem, ContinentalCuisine, ItalianCuisine, Order, Restaurant, Payment, CardPayment, UPIPayment.
+The different use cases and activities are as follows.
+Sign up in system: Online User need to sign up in Online Food Ordering System by using basic credentials such as name and email. If sign up is completed, user will be able to use the food ordering system.
+Search food items: User can search for various items.
+Search for a specific dish: User can search for a specific dish.
+Search for a restaurant: User can search for a specific restaurant.
+Select food items: After searching, the user can select various Continental or Italian food items from the menu.
+Add items to cart: After selecting the required items, he can add maximum of six items to the cart.
+Perform payment: User can pay for the order using card or UPI payment method.
+Order is placed: On successful Payment, the Order will be placed successfully.
+Order is received: Once the Order is placed, the nearest Restaurant will receive the order details.
+Pack food: After receiving the order details, restaurant employee will pack the required food items for the order.

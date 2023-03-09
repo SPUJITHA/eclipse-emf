@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/gendev.hw1/src-gen" creationIcons="false" editDirectory="/gendev.hw1.edit/src-gen"
+    editorDirectory="/gendev.hw1.editor/src-gen" modelPluginID="gendev.hw1" modelName="Hw1"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>hw1.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Hw1" basePackage="gendev" disposableProviderFactory="true"
+      ecorePackage="hw1.ecore#/">
+    <genDataTypes ecoreDataType="hw1.ecore#//Calendar"/>
+    <genClasses ecoreClass="hw1.ecore#//OnlineUser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//OnlineUser/userId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//OnlineUser/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//OnlineUser/email"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//OnlineUser/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hw1.ecore#//OnlineUser/adds"/>
+      <genOperations ecoreOperation="hw1.ecore#//OnlineUser/signUp">
+        <genParameters ecoreParameter="hw1.ecore#//OnlineUser/signUp/name"/>
+        <genParameters ecoreParameter="hw1.ecore#//OnlineUser/signUp/email"/>
+      </genOperations>
+      <genOperations ecoreOperation="hw1.ecore#//OnlineUser/searchItems"/>
+      <genOperations ecoreOperation="hw1.ecore#//OnlineUser/addItemsToCart">
+        <genParameters ecoreParameter="hw1.ecore#//OnlineUser/addItemsToCart/item"/>
+      </genOperations>
+      <genOperations ecoreOperation="hw1.ecore#//OnlineUser/placeOrder"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//Restaurant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Restaurant/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Restaurant/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Restaurant/orderId"/>
+      <genOperations ecoreOperation="hw1.ecore#//Restaurant/receiveOrder">
+        <genParameters ecoreParameter="hw1.ecore#//Restaurant/receiveOrder/orderId"/>
+      </genOperations>
+      <genOperations ecoreOperation="hw1.ecore#//Restaurant/packItems">
+        <genParameters ecoreParameter="hw1.ecore#//Restaurant/packItems/orderId"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="hw1.ecore#//FoodItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//FoodItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//FoodItem/price"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//ContinentalCuisine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//ContinentalCuisine/description"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//ItalianCuisine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//ItalianCuisine/description"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Order/orderId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Order/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Order/date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hw1.ecore#//Order/pay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Order/price"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hw1.ecore#//Order/receives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Order/userId"/>
+      <genOperations ecoreOperation="hw1.ecore#//Order/fetchOrderDetails">
+        <genParameters ecoreParameter="hw1.ecore#//Order/fetchOrderDetails/orderId"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//Payment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Payment/orderId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Payment/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//Payment/price"/>
+      <genOperations ecoreOperation="hw1.ecore#//Payment/performPayment"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//CardPayment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//CardPayment/cardType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//CardPayment/cardNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="hw1.ecore#//UPIPayment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hw1.ecore#//UPIPayment/upiNumber"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

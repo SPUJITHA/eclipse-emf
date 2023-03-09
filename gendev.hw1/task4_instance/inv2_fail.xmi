@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hw1:OnlineUser
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:hw1="http://www.example.org/hw1">
+  <places orderId="12345"
+      price="100.0">
+    <pay orderId="12345"
+        price="250.0"/>
+  </places>
+  <adds xsi:type="hw1:ContinentalCuisine"
+      name="frenchtoast"
+      price="150.0"/>
+  <adds xsi:type="hw1:ItalianCuisine"
+      name="pizza"
+      price="50.0"/>
+  <adds xsi:type="hw1:ItalianCuisine"
+      name="pie"
+      price="10.0"/>
+  <adds xsi:type="hw1:ContinentalCuisine"
+      name="danish sweet"
+      price="70.0"/>
+  <adds xsi:type="hw1:ItalianCuisine"
+      name="raspberry"
+      price="80.0"/>
+  <adds xsi:type="hw1:ItalianCuisine"
+      name="pie"
+      price="10.0"/>
+  <adds xsi:type="hw1:ContinentalCuisine"
+      name="pizza"
+      price="50.0"/>
+</hw1:OnlineUser>

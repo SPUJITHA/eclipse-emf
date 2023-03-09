@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:hw1="http://www.example.org/hw1">
+  <hw1:OnlineUser
+      userId="12345"
+      name="Pujitha"
+      email="pujitha.s97@gmail.com">
+    <places
+        orderId="01"
+        price="80.0">
+      <pay price="90.0"/>
+    </places>
+    <adds xsi:type="hw1:ContinentalCuisine"
+        name="apple pie"
+        price="90.0"/>
+  </hw1:OnlineUser>
+  <hw1:Order
+      orderId="ORDER01"
+      status="PAID"
+      price="35.0">
+    <pay price="80.0"/>
+  </hw1:Order>
+  <hw1:Restaurant
+      name="TinyBakery"
+      location="Leicester"
+      orderId="ORDER01"/>
+  <hw1:Payment
+      orderId="ORDER01"
+      price="35.0"/>
+  <hw1:ContinentalCuisine
+      name="Pie"
+      price="35.0"
+      description="Apple pie chocolate"/>
+</xmi:XMI>
